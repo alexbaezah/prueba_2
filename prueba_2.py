@@ -51,7 +51,7 @@ print(f"el monto total comprado entre bebida y comida es: ${monto_total}")
 if estudiante:
     descuento = monto_total * 0.5 
     monto_total -= descuento
-    print(f"el monto total comprado entre bebida y comida con descuento de 50% por ser estudiante es: ${monto_total}")
+    print(f"el monto total comprado entre bebida y comida con descuento de 50% por ser estudiante es: ${monto_total:.0f}")
     efectivo = int(input("¿con cuánto pagará ?"))
     vuelto = efectivo - monto_total 
     if efectivo < monto_total:
@@ -59,7 +59,7 @@ if estudiante:
     elif efectivo == monto_total:
         print("pagó con el monto justo, no hay vuelto")
     else:
-        print(f"su vuelto es de {vuelto}")
+        print(f"su vuelto es de {vuelto:.0f}")
 
 
 
