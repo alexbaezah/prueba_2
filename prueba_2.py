@@ -12,7 +12,7 @@ if estudiante == "si":
 
 if edad:
     print(f"Usted {nombre} al ser menor de edad, el costo de entrada al cerro es de 1.000 pesos")
-elif edad:
+else:
     print(f"Usted {nombre} al ser ayor de edad el costo de entrada al cerro es de 2.000 pesos ")
 
 monto_total = 0
@@ -35,7 +35,7 @@ print(f"el monto comprado en bebidas fue: ${monto_total}")
 
 print("para comer.... \n1) Barra de proteína -> $1.000\n2)Sandwich de jamón o queso -> $.1500\n3)Sandwich de palta -> $2.000")
 comer = int(input())
-cantidad = int(input("¿Cuánto llevará?"))
+cantidad = int(input("¿Cuánto llevará ?"))
 if comer == 1:
     cantidad *= 1000
     monto_total += cantidad
@@ -51,7 +51,15 @@ print(f"el monto total comprado entre bebida y comida es: ${monto_total}")
 if estudiante:
     descuento = monto_total * 0.5 
     monto_total -= descuento
-    print(f"usted {nombre} al ser estudiante tiene un descuento de 50%, el monto total queda: ${monto_total}") 
+    print(f"el monto total comprado entre bebida y comida con descuento de 50% por ser estudiante es: ${monto_total}")
+    efectivo = int(input("¿con cuánto pagará ?"))
+    vuelto = efectivo - monto_total 
+    if efectivo < monto_total:
+        print("no hay vuelto y tampoco hay venta")
+    elif efectivo == monto_total:
+        print("pagó con el monto justo, no hay vuelto")
+    else:
+        print(f"su vuelto es de {vuelto}")
 
 
 
